@@ -1,13 +1,16 @@
 import React from 'react'
 import Upload from './components/Upload'
+import Image from 'next/image'
 
 function Page() {
   return (
     <>
-      <div className='h-screen bg-blue-50 flex '>
+      <div className='h-screen bg-blue-50 flex relative '>
 
         <Upload />
 
+
+        <Image className='absolute' width={50} height={50} src='/upload/google.png' />
       </div>
     </>
   )
