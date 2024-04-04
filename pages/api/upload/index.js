@@ -20,11 +20,20 @@ export default async function (req, res) {
                 'File [' + fieldname + ']: filename: ' + filename + ', encoding: ' + encoding + ', mimetype: ' + mimetype,
             );
 
+            // fs.mkdir()
+            
             const path = `public/upload/${filename.filename}`
-
+            
             const stream = fs.createWriteStream(path)
 
-            file.pipe(stream)
+
+            const uploading = async () => {
+
+                const result = await file.pipe(stream)
+                console.log(result.path)
+            }
+
+            uploading()
 
 
             file.on('data', function (data) {

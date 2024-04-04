@@ -10,7 +10,7 @@ function Page() {
         <Upload />
 
 
-        <Image className='absolute' width={50} height={50} src='/upload/google.png' />
+        <Image alt='uploaded file' className='absolute' width={50} height={50} src='/upload/google.jpg' />
       </div>
     </>
   )
